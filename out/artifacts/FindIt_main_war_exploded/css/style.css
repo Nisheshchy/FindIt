@@ -1,0 +1,346 @@
+/* ================================================
+   FindIT - Lost and Found Portal
+   Common stylesheet (style.css)
+   Save this file at: src/main/webapp/css/style.css
+   ================================================ */
+
+/* ---------- Color theme ----------
+   Navy Blue : #0b2545
+   Teal      : #1f8a8a
+   White     : #ffffff
+   Light grey: #f2f4f7
+   Dark text : #2b2b2b
+----------------------------------- */
+
+/* Reset basic spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Verdana, sans-serif;
+    background-color: #f2f4f7;
+    color: #2b2b2b;
+    line-height: 1.5;
+}
+
+a {
+    color: #0b2545;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1f8a8a;
+}
+
+/* ---------- Header / Navigation ---------- */
+.header {
+    background-color: #0b2545;
+    color: #ffffff;
+    padding: 12px 20px;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #1f8a8a; /* teal accent on "IT" */
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 18px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    color: #7ed3d3;
+}
+
+/* ---------- Page container ---------- */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* ---------- Hero (home page) ---------- */
+.hero {
+    background-color: #ffffff;
+    border-left: 6px solid #1f8a8a;
+    padding: 30px 25px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.hero h1 {
+    color: #0b2545;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-block;
+    background-color: #0b2545;
+    color: #ffffff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #1f8a8a;
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: #1f8a8a;
+}
+
+.btn-danger {
+    background-color: #b23a3a;
+}
+
+.btn-small {
+    padding: 6px 10px;
+    font-size: 13px;
+}
+
+/* ---------- Cards (item listings) ---------- */
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #dde1e7;
+    border-radius: 6px;
+    padding: 15px;
+    flex: 1 1 250px;     /* responsive: min 250px wide */
+    max-width: 320px;
+}
+
+.card h3 {
+    color: #0b2545;
+    margin-bottom: 6px;
+}
+
+.card .meta {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e3f1f1;
+    color: #1f8a8a;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-right: 4px;
+}
+
+.tag-lost  { background-color: #fde2e2; color: #b23a3a; }
+.tag-found { background-color: #e3f1f1; color: #1f8a8a; }
+
+/* ---------- Forms ---------- */
+.form-box {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    max-width: 450px;
+    margin: 20px auto;
+    border: 1px solid #dde1e7;
+}
+
+.form-box h2 {
+    color: #0b2545;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 8px 10px;
+    border: 1px solid #cfd4dc;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* ---------- Validation messages ---------- */
+.msg {
+    padding: 10px 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.msg-error {
+    background-color: #fde2e2;
+    color: #8a1f1f;
+    border: 1px solid #f5b5b5;
+}
+
+.msg-success {
+    background-color: #e2f5e8;
+    color: #1f6a3a;
+    border: 1px solid #b5e0c2;
+}
+
+/* ---------- Tables (admin pages) ---------- */
+.table-wrapper {
+    overflow-x: auto; /* responsive horizontal scroll on mobile */
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #dde1e7;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+th, td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #eceff3;
+    font-size: 14px;
+}
+
+th {
+    background-color: #0b2545;
+    color: #ffffff;
+}
+
+tr:hover td {
+    background-color: #f7f9fc;
+}
+
+/* ---------- Sections ---------- */
+.section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #dde1e7;
+}
+
+.section h2 {
+    color: #0b2545;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #1f8a8a;
+    padding-bottom: 6px;
+    display: inline-block;
+}
+
+/* ---------- Stats boxes (admin dashboard) ---------- */
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    flex: 1 1 180px;
+    background-color: #ffffff;
+    border-left: 5px solid #1f8a8a;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.stat-box h3 {
+    color: #0b2545;
+    font-size: 28px;
+}
+
+.stat-box p {
+    color: #666;
+    font-size: 13px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+    background-color: #0b2545;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+/* ---------- Responsive (mobile) ---------- */
+@media (max-width: 700px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        margin-top: 10px;
+        gap: 10px;
+    }
+    .form-box {
+        margin: 10px;
+    }
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+}
